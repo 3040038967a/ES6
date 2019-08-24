@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		// 常量必须要赋初始值
+		const aa=9;
+		// console.log(aa);
+		
+		// let bb=10;
+		
+		
+		{
+			// 此变量只能在当前括号中能使用
+			let bb=11;
+		}
+		
+		// console.log(bb);
+		
+		
+		var arr=[];
+		for(let i=0;i<10;i++){
+			arr[i]=function(){
+				console.log(i);
+			}
+		}
+		
+		// arr[1]();
+		
+		
+		let ff=77;
+		
+		// 直接报错,不存在声明提升
+		function hh(){
+			let ff=11;
+			console.log(ff);
+		}
+		hh();
+		
+		
+		
+		
+		
+	</script>
+</html>
