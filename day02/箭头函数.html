@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		// 箭头函数传值
+		// const s1=(a,b)=>{
+		// 	console.log(a,b);
+		// }
+		// s1("a","b");
+		
+		
+		const s2={
+			name:"王祖贤",
+			age:18,
+			show:()=>{
+				setInterval(()=>{
+					// s2.age=s2.age+(++s2.age);
+					console.log(this.name,this.age);
+					
+				},1000)
+				
+				
+			}
+
+		}
+		
+		// const s3=()=>{
+		// 	name:"",
+		// 	age:20,
+		// 	
+		// }
+		// 	
+		// 	
+		// }
+		
+		
+		s2.show();
+		
+		
+	</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<table>
+			
+		</table>
+	</body>
+	<script>
+		let tab=document.getElementsByTagName("table")[0];
+		
+		const arry=[
+				{name:"王祖贤",age:19},
+				{name:"胡杏儿",age:21},
+				{name:"陈博文",age:18}
+			]
+			
+			let txt="";
+			
+			for(let i=0;i<arry.length;i++){
+				txt+=`<tr>
+					<td>${arry[i].name}</td>
+					<td>${arry[i].age}</td>
+					</tr>
+				`;
+			}
+			
+		tab.innerHTML=txt;
+		
+		
+	</script>
+</html>

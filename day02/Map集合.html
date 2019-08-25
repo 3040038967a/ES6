@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		let s1=new Map;
+		
+		s1.set(1,"哈哈");
+		s1.set(2,"啦啦");
+		s1.set(3,"嘻嘻");
+		s1.set(4,"呵呵");
+
+		console.log(s1,s1.has(9));
+		s1.delete(1);
+		s1.set(4,"haha")
+		console.log(s1.get(2));
+		console.log(s1,s1.has(9));
+		// 清空值
+		s1.clear();
+		
+		console.log(s1,s1.has(9));
+	</script>
+</html>

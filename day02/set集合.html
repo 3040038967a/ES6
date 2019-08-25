@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		let users=new Set();
+		users.add("a");
+		users.add("b");
+		users.add("c");
+		
+		// set, 第一种for of 遍历
+		 for(let i of users){
+			 console.log(i);
+		 }
+		 
+		 //第二种,forEach第二种
+		 // a,b分别代表键和值,set中只代表值,没有键
+		 users.forEach((a,b)=>{
+			 console.log(a,b);
+			 
+		 })
+		
+		
+		
+		
+		// 删除set集合中的某一个值
+		users.delete("a");
+		// 判断set集合中有没有你指定的一个值
+		console.log(users,users.has("a"));
+		
+		// 清空set集合
+		users.clear();
+		// 获取set集合的长度
+		console.log(users.size);
+		console.log(users);
+	</script>
+</html>
