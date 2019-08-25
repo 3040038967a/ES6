@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		let s1=new Set();
+		s1.add("a");
+		s1.add("b");
+		s1.add("c");
+		
+		// 查看set数据个数,size属性
+		console.log(s1.size);
+		
+		// 判断集合中是否有1你指定的值
+		console.log(s1.has("a"));
+		
+		// 删除某一个值
+		s1.delete("a");
+		console.log(s1);
+		
+		// 清空数据
+		// s1.clear();
+		console.log(s1);
+
+		//第一种遍历set集合的方法，foreach, 遍历set集合,因为没有下标,所以a,b都是值
+		// s1.forEach((a,b)=>{
+		// 	console.log(a,b);
+		// })
+		
+		// 第二种遍历方法,for of
+		
+		var arry=[]
+		
+		for(let i of s1){
+			arry.push(i);
+			console.log(i);
+		}
+		
+		console.log(arry);
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		let s1={
+			name:"王祖贤",
+			age:18,
+			show(){
+				setInterval(()=>{
+					//如果使用箭头函数,则this指向上一级,所以指向的不是定时器
+					console.log(this.age);
+				},1000)
+				
+				
+				
+			}
+		}
+		
+		s1.show();
+		
+	</script>
+</html>

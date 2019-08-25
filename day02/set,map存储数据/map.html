@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var s1=new Map();
+		
+		s1.set("aa","haha");
+		s1.set(2,"lala");
+		s1.set(3,"xixi");
+		s1.set(4,"hehe");
+		
+		for(let i=0;i<s1.size;i++){
+			console.log(s1.get(i+1));
+		}
+		
+		// 遍历
+		//for in,无效
+		// for(let i in s1){
+		// 	console.log(i+"遍历");
+		// }
+		
+		//for of,无效
+		// for(let i of s1){
+		// 	console.log(i);
+		// }
+		
+		// forEach,有效,a代表值,b代表键
+		// s1.forEach((a,b)=>{
+		// 	console.log(b,a);
+		// })
+		
+		
+		// s1.keys(),返回所有键,返回的类型是遍历器,只能用 for of,foreach 遍历
+		
+		// console.log(s1.keys(),"获取集合的所有键");
+		
+		for(let i of s1.keys()){
+			console.log(s1.get(i),"拿到");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		// 删除一个值,只能删除键才有效
+		s1.delete(1);
+		console.log(s1);
+		
+		
+		// 查找有没有值,也只能查找键才有效
+		console.log(s1.has(2));
+		
+		
+		
+		// 清空
+		s1.clear();
+		console.log(s1);
+		
+		
+		
+		
+		
+		
+	</script>
+</html>
