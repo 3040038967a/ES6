@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var obj=new Proxy({
+			name:"王祖贤",
+			age:18
+			
+			
+		},{
+			get(target,propkey,receiver){//拦截,对象的获取
+			// target,要获取的对象
+			//propkey,要获取的对象的属性
+			//receiver,当前proxy实例
+				// console.log(target,propkey,receiver);
+				//固定写法,将获取的值反出去
+				
+				if(propkey=="age"){
+					return "不能获取";
+				}else{
+					return Reflect.get(target,propkey,receiver);
+				}
+				
+				
+				
+		},
+		
+		set(target,propkey,values,receiver){//拦截,修改对象的值
+			//target,操作的这个对象
+			//propkey,修改对象的属性
+			//values,修改这个对象的属性对应的值
+			//proxy这个实例
+			if(propkey=="name"){
+				return"不能修改";
+			}else{
+				return Reflect.set(target,propkey,values,receiver);
+			}
+		
+			
+		}
+		
+		
+		
+			
+
+		}) 
+		obj.name="胡杏儿";
+		
+		console.log(obj.name);
+		console.log(obj.age);
+		
+	</script>
+</html>
