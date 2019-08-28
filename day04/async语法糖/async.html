@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function s1(val,time){
+			setTimeout(function(){
+				
+				console.log(val);
+				
+			},time)
+			
+		}
+		
+		
+		
+		
+		
+		// function* s2(){
+		// 	
+		// 	yield s1(1,500);
+		// 	yield s1(2,1500);
+		// 	yield s1(3,2000);
+		// 	
+		// }
+		// 
+		// let s3=s2();
+		
+		// console.log(s3);
+		// 
+		// s3.next();
+		// s3.next();
+		// s3.next()
+		
+		
+		// async语法糖
+		async function s2(){
+			await s1(1,500);
+			await s1(2,1500);
+			await s1(3,2000);
+		}
+		
+		s2()
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

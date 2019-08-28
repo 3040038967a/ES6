@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		
+		let s1={
+			name:"王祖贤",
+			age:18
+		}
+		
+		let s2= new Proxy(s1,{
+			
+			get(target,propkey,proxy){
+				
+				// 第一种方法
+				// if(target[propkey]==undefined){
+				// 	
+				// 	return "获取属性异常";
+				// 	
+				// }else{
+				// 	
+				// 	return target[propkey];
+				// }
+				
+				// 第二种方法
+				// if(propkey in target){
+				// 	return target[propkey];
+				// }else{
+				// 	
+				// 	new throw Error();
+				// }
+				// 
+				
+				
+			},
+			
+			
+			
+			set(target,propkey,values,receiver){
+				
+				if(propkey=="age"){
+					
+					// if(values>=0 && values<=100 ){
+						
+						// return target[propkey]=values;
+						
+					// }else{
+						
+						return "修改年龄不符合";
+						
+						
+					 // }
+					
+					
+				}else{
+					
+					target[propkey]=values;
+				}
+						
+				
+				
+			}
+
+		})
+		
+		s2.age=10001;
+		console.log(s2.age);
+		
+		
+		s2.name="王祖贤1";
+		console.log(s2.name);
+		console.log(s2.nam);
+		
+	</script>
+</html>

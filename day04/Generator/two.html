@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function s1(a,b){
+			
+			setTimeout(()=>{
+				console.log(a,b);
+			},1000)
+			
+			
+			
+			// let ajax=new XMLHttpRequest();
+			// ajax.open("get",url,true);
+			// ajax.send();
+			// new Proxy((resolve,reject)=>{
+			// 	ajax.onreadystatechange=function(){
+			// 		if(ajax.readyState==4 && ajax.status==200){
+			// 			resolve(ajax.responseText);
+			// 		}
+			// 	}
+			// 	
+			// })
+			// 
+			
+		}
+		
+		
+		
+		function* s2(){
+			yield s1("王祖贤1","胡杏儿1");
+			yield s1("王祖贤2","胡杏儿2");
+			yield s1("王祖贤3","胡杏儿3");
+		}
+		
+		// 生成一个状态机
+		let s3=s2();
+		// 指针指向,默认指向函数,第一个next(),才会指向第一个状态,一次next()叠加
+		s3.next();
+		s3.next();
+		s3.next();
+		s3.next();
+		
+		
+		
+		
+		
+	</script>
+</html>
